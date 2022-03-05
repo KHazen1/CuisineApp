@@ -4,7 +4,7 @@ import useAuth from "./composable/useAuth";
 import Index from "./pages/index.vue";
 import About from "./pages/about.vue";
 import Login from "./pages/login.vue";
-import Secret from "./pages/secret.vue";
+import Recipes from "./pages/recipes.vue";
 import NotFound from "./pages/404.vue";
 
 const { isAuthenticated } = useAuth();
@@ -26,9 +26,9 @@ const routes = [
       component: Login,
     },
     {
-      path: "/secret",
-      name: "Secret",
-      component: Secret,
+      path: "/recipes",
+      name: "Recipes",
+      component: Recipes,
       beforeEnter: (to, from, next) => {
         console.log(isAuthenticated);
         if (!isAuthenticated.value) {
