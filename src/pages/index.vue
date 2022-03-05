@@ -5,7 +5,7 @@ const { isAuthenticated, user } = useAuth();
 
 <template>
     <div
-     class="flex flex-col items-center justify-center space-y-12 min-h-screen-nonav"
+     class="flex flex-col items-center justify-center min-h-screen-nonav"
     >
         <h2
         v-if="!isAuthenticated"
