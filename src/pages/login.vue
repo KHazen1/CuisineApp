@@ -31,6 +31,7 @@ const { ready, start } = useTimeout(3000, { controls: true });
     <div
         class="flex flex-col items-center justify-center space-y-12 min-h-screen-nonav"
     >
+        <h1 class="font-mono text-2xl">Recipe Login</h1>
         <div
             class="flex items-center justify-center overflow-hidden bg-gray-200 rounded-lg shadow-2xl "
         >
