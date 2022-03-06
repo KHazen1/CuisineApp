@@ -9,9 +9,9 @@ const { isAuthenticated, user } = useAuth();
     >
         <h2
         v-if="!isAuthenticated"
-        class="text-6xl tracking-tighter font-extralight"
+        class="py-4 text-6xl tracking-tighter font-extralight"
         >
-            Welcome
+            Lets get Cooking!
         </h2>
         <h2 
         v-else class="text-6xl tracking-tighter font-extralight"
