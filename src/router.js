@@ -5,6 +5,7 @@ import Index from "./pages/index.vue";
 import About from "./pages/about.vue";
 import Login from "./pages/login.vue";
 import Recipes from "./pages/recipes.vue";
+import Shopping from "./pages/shopping.vue";
 import NotFound from "./pages/404.vue";
 
 const { isAuthenticated } = useAuth();
@@ -29,6 +30,18 @@ const routes = [
       path: "/recipes",
       name: "Recipes",
       component: Recipes,
+      beforeEnter: (to, from, next) => {
+        console.log(isAuthenticated);
+        if (!isAuthenticated.value) {
+          next("/login");
+        }
+        next();
+      },
+    },
+    {
+      path: "/shopping",
+      name: "Shopping",
+      component: Shopping,
       beforeEnter: (to, from, next) => {
         console.log(isAuthenticated);
         if (!isAuthenticated.value) {

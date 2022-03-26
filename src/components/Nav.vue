@@ -46,6 +46,13 @@ const loggingOut = () => {
                                 Recipes
                             </li>
                         </router-link>
+                        <router-link :to="{ name: 'Shopping' }">
+                            <li
+                                class="px-4 py-8 hover:cursor-pointer hover:bg-green-500 hover:text-green-800"
+                            >
+                                Grocery List
+                            </li>
+                        </router-link> 
                         <button @click="loggingOut">
                             <li
                                 class="px-4 py-8 hover:cursor-pointer hover:bg-green-500 hover:text-green-800"
