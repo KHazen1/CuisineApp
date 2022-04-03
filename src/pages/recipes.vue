@@ -11,5 +11,6 @@
         Get Recipe 🍔
       </button>
     </div>
+    <div id="recipe"></div>
   </div>
 </template>
