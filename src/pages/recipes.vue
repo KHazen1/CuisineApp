@@ -7,7 +7,7 @@ const {meals, getMeals} = useApi();
 
 <template>
   <div class="bg-gray-200">
-    <div class="flex-row py-6 text-center ">
+    <div class="flex-row py-6 text-center bg-gray-200 border-2 border-gray-400 border-solid">
       <h3 class="text-6xl ">
         Meal Time!
       </h3>
@@ -18,7 +18,7 @@ const {meals, getMeals} = useApi();
        Get Recipe 🍔
        </button>
     </div>
-      <div v-for="meal in meals" :key="meal.idMeal">
+      <div class="bg-gray-200 border-2 border-gray-400 border-solid" v-for="meal in meals" :key="meal.idMeal">
         <div class="flex-row py-6 text-center ">
           <div class="py-2">
             <h3 class="text-4xl">{{ meal.strMeal }}</h3>
@@ -26,7 +26,7 @@ const {meals, getMeals} = useApi();
             <p>Region: {{ meal.strArea }}</p>
           </div>
           <h4 class="py-2 text-2xl">Instructions</h4>
-          <p class="py-2 mx-4">{{ meal.strInstructions }}</p>
+          <p class="py-2 mx-6 text-left">{{ meal.strInstructions }}</p>
         <div class="px-6 mx-6 text-justify">
           <h3 class="py-4 text-3xl tracking-wide">Ingredients</h3>
             <ul class="px-2 list-disc">
